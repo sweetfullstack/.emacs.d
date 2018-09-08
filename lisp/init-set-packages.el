@@ -7,7 +7,7 @@
 (global-hungry-delete-mode)
 
 ;;smartparens 补齐右边括号
-(require 'smartparens-config)
+;;(require 'smartparens-config)
 ;; Always start smartparens mode in js-mode.
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
