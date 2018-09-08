@@ -19,6 +19,7 @@
 				   js2-mode
 				   nodejs-repl
 				   exec-path-from-shell
+				   popwin
 				   
 				   )  "Default packages")
 
