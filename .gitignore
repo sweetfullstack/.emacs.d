@@ -1,0 +1,8 @@
+#目录
+/elpa
+/auto-save-list
+recentf
+recentf~
+#文件
+*.el~
+
