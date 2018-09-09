@@ -25,6 +25,9 @@
 ;;关闭错误提示音
 (setq ring-bell-function 'ignore)
 
+;;设置编码
+(set-language-environment "UTF-8")
+
 ;;每一次当 Emacs 需要与你确认某个命令时需要输入 (yes or no) 比较麻烦，所有我们可 以使用下面的代码，设置一个别名将其简化为只输入 (y or n) 。
 (fset 'yes-or-no-p 'y-or-n-p)
 

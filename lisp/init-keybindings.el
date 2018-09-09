@@ -12,6 +12,32 @@
 ;;expand-region  更方便的选中一片区域
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+;;配置 Occur Mode 使其默认搜索当前被选中的或者在光标下的字符串
+;;按e进入编辑模式
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+;;imenu实现精确的函数跳转
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
+;;iedit 同时编辑多个区域
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
+;;hippie补全
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+;;ag搜索
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
+;;代码块补齐
+(global-set-key (kbd "H-w") #'aya-create)
+(global-set-key (kbd "H-y") #'aya-expand)
+
+;;下面的配置来在 Company-mode 中使用 C-n 与 C-p 来选择补全项
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 
 ;;自定义快捷键
@@ -35,15 +61,15 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
-;;配置 Occur Mode 使其默认搜索当前被选中的或者在光标下的字符串
-;;按e进入编辑模式
-(global-set-key (kbd "M-s o") 'occur-dwim)
 
-;;imenu实现精确的函数跳转
-(global-set-key (kbd "M-s i") 'counsel-imenu)
+;;-------------------------org快捷键-----------------------
 
-;;hippie补全
-(global-set-key (kbd "s-/") 'hippie-expand)
+;;为工作安排设定快捷键
+(global-set-key (kbd "C-c r") 'org-capture)
 
+;; 设置 org-agenda 打开快捷键
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+;;------------------------org配置结束-----------------------
 ;;文件末尾
 (provide 'init-keybindings)

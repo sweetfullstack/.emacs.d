@@ -18,6 +18,7 @@
 				   smartparens
 				   nodejs-repl
 				   iedit
+				   helm-ag
 				   ;;reveal-in-osx-finder
 				   exec-path-from-shell
 				   
@@ -27,6 +28,8 @@
 				   web-mode
 				   js2-refactor
 				   expand-region
+				   auto-yasnippet
+				   flycheck
 				   )  "Default packages")
 
 (setq package-selected-packages sweet/packages)

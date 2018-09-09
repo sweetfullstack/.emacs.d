@@ -1,4 +1,7 @@
 
+;;在打开 JavaScript 时激活语法检查
+(add-hook 'js2-mode-hook 'flycheck-mode)
+
 ;;设置初始代码的缩进
 (defun my-web-mode-indent-setup ()
   (setq web-mode-markup-indent-offset 2) ; web-mode, html tag in html file
@@ -50,6 +53,7 @@
 (add-hook 'js2-mode-hook
               (lambda ()
                 (setq imenu-create-index-function 'js2-imenu-make-index)))
+
 
 ;;文件末尾
 (provide 'init-web)

@@ -2,6 +2,10 @@
 ;;(global-company-mode 1)
 (add-hook 'after-init-hook 'global-company-mode)
 
+;;代码块补齐
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
 ;;hungry-delete 删除多余空格
 (require 'hungry-delete)
 (global-hungry-delete-mode)
