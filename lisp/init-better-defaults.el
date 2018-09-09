@@ -1,6 +1,43 @@
 
+;;隐藏dos下的换行符
+(defun hidden-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (unless buffer-display-table
+    (setq buffer-display-table (make-display-table)))
+  (aset buffer-display-table ?\^M []))
+
+;;删除dos下的换行符
+(defun remove-dos-eol ()
+  "Replace DOS eolns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
 ;;显示另外一边括号的位置--括号匹配
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+        (t (save-excursion
+             (ignore-errors (backward-up-list))
+             (funcall fn)))))
+
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
+;;配置 Occur Mode 使其默认搜索当前被选中的或者在光标下的字符串
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+            (buffer-substring-no-properties
+             (region-beginning)
+             (region-end))
+          (let ((sym (thing-at-point 'symbol)))
+            (when (stringp sym)
+              (regexp-quote sym))))
+        regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "M-s o") 'occur-dwim)
 
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
@@ -28,7 +65,7 @@
 
 ;;popwin 插件可以自动将光标移动到，新创建的窗口中。使用下面的代码将其启用
 (require 'popwin)
-(popwin-mode 1)
+(popwin-mode t)
 
 ;;关闭错误提示音
 (setq ring-bell-function 'ignore)
@@ -39,9 +76,9 @@
 ;;缩写补全
 (setq-default abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table '(
-                                            ;; Shifu
+                                            ;; 微软
                                             ("8mf" "Microsoft")
-                                            ;; Tudi
+                                            ;; 昵称
                                             ("8sw" "Sweet_Rabbit")
                                            ))
 

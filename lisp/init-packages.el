@@ -9,32 +9,37 @@
 (require 'cl)
 
 ;;add whatever packages you want here
-(defvar zilongshanren/packages '(
+(defvar sweet/packages '(
 				   company
 				   atom-one-dark-theme
 				   hungry-delete
 				   swiper
 				   counsel
 				   smartparens
-				   js2-mode
 				   nodejs-repl
-				   exec-path-from-shell
+				   iedit
 				   ;;reveal-in-osx-finder
-				   popwin
+				   exec-path-from-shell
 				   
+				   popwin
+				   ;;web
+				   js2-mode
+				   web-mode
+				   js2-refactor
+				   expand-region
 				   )  "Default packages")
 
-(setq package-selected-packages zilongshanren/packages)
+(setq package-selected-packages sweet/packages)
 
-(defun zilongshanren/packages-installed-p ()
-    (loop for pkg in zilongshanren/packages
+(defun sweet/packages-installed-p ()
+    (loop for pkg in sweet/packages
           when (not (package-installed-p pkg)) do (return nil)
           finally (return t)))
 
-(unless (zilongshanren/packages-installed-p)
+(unless (sweet/packages-installed-p)
     (message "%s" "Refreshing package database...")
     (package-refresh-contents)
-    (dolist (pkg zilongshanren/packages)
+    (dolist (pkg sweet/packages)
       (when (not (package-installed-p pkg))
         (package-install pkg))))
 
