@@ -1,34 +1,17 @@
+
 ;; 快速打开配置文件
 ;; 将函数 open-init-file 绑定到 <f12> 键上
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
 (global-set-key (kbd "<f12>") 'open-init-file)
 
 ;;打开最近修改过的文件
-(require 'recentf)
-(recentf-mode 1)			
-(setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;;片段代码缩进
-(defun indent-buffer()
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
-(defun indent-region-or-buffer()
-  (interactive)
-  (save-excursion
-    (if (region-active-p)
-        (progn
-          (indent-region (region-beginning) (region-end))
-          (message "Indent selected region."))
-      (progn
-        (indent-buffer)
-        (message "Indent buffer.")))))
-
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+;;expand-region  更方便的选中一片区域
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 
 
 ;;自定义快捷键
@@ -52,6 +35,14 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
+;;配置 Occur Mode 使其默认搜索当前被选中的或者在光标下的字符串
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+;;iedit 是一个可以同时编辑多个区域的插件
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
+;;hippie补全
+(global-set-key (kbd "s-/") 'hippie-expand)
 
 ;;文件末尾
 (provide 'init-keybindings)
