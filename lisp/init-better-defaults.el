@@ -22,10 +22,6 @@
 ;;Emacs 自动加载外部修改过的文件
 (global-auto-revert-mode 1)
 
-;;popwin 插件可以自动将光标移动到，新创建的窗口中。使用下面的代码将其启用
-(require 'popwin)
-(popwin-mode t)
-
 ;;关闭错误提示音
 (setq ring-bell-function 'ignore)
 

@@ -7,7 +7,6 @@
   )
 (add-hook 'web-mode-hook 'my-web-mode-indent-setup)
 
-
 ;;缩进４个空格和两个空格切换
 (defun my-toggle-web-indent ()
   (interactive)
@@ -30,9 +29,8 @@
 
 ;;js2-refactor
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
+
 (js2r-add-keybindings-with-prefix "C-c C-m")
-
-
 ;;imenu 可以显示当前所有缓冲区的列表，下面的配置可以让其拥有更精确的跳转
 (defun js2-imenu-make-index ()
       (interactive)
@@ -53,9 +51,5 @@
               (lambda ()
                 (setq imenu-create-index-function 'js2-imenu-make-index)))
 
-(global-set-key (kbd "M-s i") 'counsel-imenu)
-
-
 ;;文件末尾
 (provide 'init-web)
-

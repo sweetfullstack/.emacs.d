@@ -25,6 +25,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;;popwin 插件可以自动将光标移动到，新创建的窗口中。使用下面的代码将其启用
+(require 'popwin)
+(popwin-mode t)
 
 ;;文件末尾
 (provide 'init-set-packages)

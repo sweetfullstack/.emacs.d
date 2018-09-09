@@ -36,10 +36,11 @@
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 ;;配置 Occur Mode 使其默认搜索当前被选中的或者在光标下的字符串
+;;按e进入编辑模式
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
-;;iedit 是一个可以同时编辑多个区域的插件
-(global-set-key (kbd "M-s e") 'iedit-mode)
+;;imenu实现精确的函数跳转
+(global-set-key (kbd "M-s i") 'counsel-imenu)
 
 ;;hippie补全
 (global-set-key (kbd "s-/") 'hippie-expand)
