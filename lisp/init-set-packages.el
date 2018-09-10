@@ -1,10 +1,10 @@
+;;有些插件可以补全很多编程语言，不好归类
+;;该文件为插件增加类，以及代码补全，不好归类的插件
+
 ;;company 补全插件
 ;;(global-company-mode 1)
 (add-hook 'after-init-hook 'global-company-mode)
 
-;;代码块补齐
-(yas-reload-all)
-(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;;hungry-delete 删除多余空格
 (require 'hungry-delete)
@@ -24,6 +24,18 @@
        '(("\\.js\\'" . js2-mode))
        '(("\\.html\\'" . web-mode))
        auto-mode-alist))
+
+
+;;(require 'yasnippet)
+;;js2-refactor js代码重构需要引用yasnippet
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+
+;;代码块补齐(包含很多编程语言)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;;exec-path-from-shell
 (when (memq window-system '(mac ns))

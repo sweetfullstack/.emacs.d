@@ -28,12 +28,6 @@
 
   (setq indent-tabs-mode nil))
 
-(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
-
-;;js2-refactor
-(add-hook 'js2-mode-hook #'js2-refactor-mode)
-
-(js2r-add-keybindings-with-prefix "C-c C-m")
 ;;imenu 可以显示当前所有缓冲区的列表，下面的配置可以让其拥有更精确的跳转
 (defun js2-imenu-make-index ()
       (interactive)
