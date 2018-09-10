@@ -61,6 +61,9 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
+;;向后删除一个单词
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
 
 ;;-------------------------org快捷键-----------------------
 

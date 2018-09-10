@@ -30,6 +30,12 @@
 				   expand-region
 				   auto-yasnippet
 				   flycheck
+				   ;;evil
+				   evil
+				   evil-leader
+				   window-numbering
+				   evil-nerd-commenter
+				   which-key
 				   )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
