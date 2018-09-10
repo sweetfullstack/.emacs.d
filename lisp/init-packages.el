@@ -36,6 +36,9 @@
 				   window-numbering
 				   evil-nerd-commenter
 				   which-key
+				   ;;python
+				   elpy
+				   
 				   )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
