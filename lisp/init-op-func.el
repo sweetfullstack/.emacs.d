@@ -1,8 +1,3 @@
-;; 快速打开配置文件
-;; 将函数 open-init-file 绑定到 <f12> 键上
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
 
 ;;打开最近修改过的文件
 (require 'recentf)

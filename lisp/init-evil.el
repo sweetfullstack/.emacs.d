@@ -9,6 +9,9 @@
   "ff" 'find-file
   "bb" 'switch-to-buffer
 
+  ;;代码缩进
+  "\\" 'indent-region-or-buffer
+  
   ;;窗口操作
   "1"  'select-window-1
   "2"  'select-window-2
@@ -30,10 +33,7 @@
 
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
-
-(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
-(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
-
+ 
 (which-key-mode t)
 
 ;;--------------------------------evil结束-----------------------

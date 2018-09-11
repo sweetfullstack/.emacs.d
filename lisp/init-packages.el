@@ -10,51 +10,50 @@
 
 ;;add whatever packages you want here
 (defvar sweet/packages '(
-				   company
-				   atom-one-dark-theme
-				   hungry-delete
-				   swiper
-				   counsel
-				   smartparens
-				   nodejs-repl
-				   iedit
-				   helm-ag
-				   ;;reveal-in-osx-finder
-				   exec-path-from-shell
-				   
-				   popwin
-				   ;;web
-				   js2-mode
-				   web-mode
-				   js2-refactor
-				   expand-region
-				   auto-yasnippet
-				   flycheck
-				   ;;evil
-				   evil
-				   evil-leader
-				   window-numbering
-				   evil-nerd-commenter
-				   which-key
-				   ;;python
-				   elpy
-				   
-				   )  "Default packages")
+			 ;;set-package.el 基础配置增加
+			 hungry-delete
+			 swiper
+			 counsel
+			 smartparens
+			 helm-ag
+			 iedit
+			 popwin
+			 company
+			 ;;reveal-in-osx-finder
+			 exec-path-from-shell
+			 ;;ui
+			 atom-one-dark-theme
+			 
+			 ;;web
+			 js2-mode
+			 web-mode
+			 js2-refactor
+			 expand-region
+			 auto-yasnippet
+			 nodejs-repl
+			 ;;evil
+			 evil
+			 evil-leader
+			 window-numbering
+			 evil-nerd-commenter
+			 which-key
+			 ;;python
+			 
+			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
 
 (defun sweet/packages-installed-p ()
-    (loop for pkg in sweet/packages
-          when (not (package-installed-p pkg)) do (return nil)
-          finally (return t)))
+  (loop for pkg in sweet/packages
+        when (not (package-installed-p pkg)) do (return nil)
+        finally (return t)))
 
 (unless (sweet/packages-installed-p)
-    (message "%s" "Refreshing package database...")
-    (package-refresh-contents)
-    (dolist (pkg sweet/packages)
-      (when (not (package-installed-p pkg))
-        (package-install pkg))))
-
+  (message "%s" "Refreshing package database...")
+  (package-refresh-contents)
+  (dolist (pkg sweet/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
 
 
 ;;文件末尾
