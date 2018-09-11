@@ -8,6 +8,10 @@
 ;;向后删除一个单词
 (global-set-key (kbd "C-w") 'backward-kill-word)
 
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 ;;自定义快捷键
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)

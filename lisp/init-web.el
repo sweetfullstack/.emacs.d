@@ -48,6 +48,5 @@
               (lambda ()
                 (setq imenu-create-index-function 'js2-imenu-make-index)))
 
-
 ;;文件末尾
 (provide 'init-web)

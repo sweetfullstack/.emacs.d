@@ -11,6 +11,7 @@
 ;;add whatever packages you want here
 (defvar sweet/packages '(
 			 ;;set-package.el 基础配置增加
+			 use-package
 			 hungry-delete
 			 swiper
 			 counsel
@@ -19,6 +20,11 @@
 			 iedit
 			 popwin
 			 company
+			 projectile
+			 ;;lsp补全
+			 lsp-ui
+			 lsp-mode
+			 company-lsp
 			 ;;reveal-in-osx-finder
 			 exec-path-from-shell
 			 ;;ui
