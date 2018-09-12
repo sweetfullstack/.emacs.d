@@ -2,6 +2,14 @@
 ;;在打开 JavaScript 时激活语法检查
 (add-hook 'js2-mode-hook 'flycheck-mode)
 
+;;web-mode
+;;js2-mode 
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       '(("\\.html\\'" . web-mode))
+       auto-mode-alist))
+
 ;;设置初始代码的缩进
 (defun my-web-mode-indent-setup ()
   (setq web-mode-markup-indent-offset 2) ; web-mode, html tag in html file
@@ -44,9 +52,17 @@
                                    ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*()[ \t]*{" 1)
                                    ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*function[ \t]*(" 1)
                                    ("Task" "[. \t]task([ \t]*['\"]\\([^'\"]+\\)" 1)))))
+
 (add-hook 'js2-mode-hook
               (lambda ()
                 (setq imenu-create-index-function 'js2-imenu-make-index)))
 
+
+
+;;(require 'yasnippet)
+;;js2-refactor js代码重构需要引用yasnippet
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+
+(js2r-add-keybindings-with-prefix "C-c C-m")
 ;;文件末尾
 (provide 'init-web)

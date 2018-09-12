@@ -11,11 +11,12 @@
 ;;向后删除一个单词
 (global-set-key (kbd "C-w") 'backward-kill-word)
 
+;;在当前项目中查找
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-;;自定义快捷键
+
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
@@ -67,15 +68,10 @@
 
 ;;-----------------------web模式结束------------------------
 
-
-
-;;-----------------------evil配置--------------------------
-
 ;;快捷注释
 (define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
 
-;;-----------------------evil配置结束-----------------------
 
 
 ;;----------------------代码补齐.语法检查---------------------
@@ -84,6 +80,7 @@
 (global-set-key (kbd "s-/") 'hippie-expand)
 
 ;;代码块补齐
+;;yasnippet
 (global-set-key (kbd "H-w") #'aya-create)
 (global-set-key (kbd "H-y") #'aya-expand)
 

@@ -10,32 +10,33 @@
 
 ;;add whatever packages you want here
 (defvar sweet/packages '(
-			 ;;set-package.el 基础配置增加
+			 ;;增加emacs功能
 			 use-package
-			 hungry-delete
+			 ;;keybindings.el配置
+			 ;;或者evil.el配置
 			 swiper
-			 counsel
-			 smartparens
-			 helm-ag
+			 counsel		 
 			 iedit
-			 popwin
+			 helm-ag
+			 expand-region
+			 projectile;;将目录变为项目.projectile
+			 ;;set-package.el 插件增加基础配置
 			 company
-			 projectile
+			 auto-yasnippet
+			 hungry-delete
+			 smartparens
+			 popwin
+			 exec-path-from-shell
 			 ;;lsp补全
 			 lsp-ui
 			 lsp-mode
 			 company-lsp
-			 ;;reveal-in-osx-finder
-			 exec-path-from-shell
 			 ;;ui
 			 atom-one-dark-theme
-			 
 			 ;;web
 			 js2-mode
 			 web-mode
 			 js2-refactor
-			 expand-region
-			 auto-yasnippet
 			 nodejs-repl
 			 ;;evil
 			 evil
