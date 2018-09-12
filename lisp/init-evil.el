@@ -21,8 +21,8 @@
   "w-" 'split-window-below
   ":"  'counsel-M-x
   "wd" 'delete-other-windows
-  "q"  'delete-window
-
+  "q"  'kill-buffer-and-window
+  
   ;;搜索文件
   "ps" 'helm-do-ag-project-root
   

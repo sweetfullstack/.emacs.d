@@ -13,6 +13,7 @@
 (require 'init-set-packages)
 (require 'init-lsp)
 (require 'init-common-lisp)
+(require 'init-python)
 (require 'init-evil)
 (require 'init-keybindings)
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
