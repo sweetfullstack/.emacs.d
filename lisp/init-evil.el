@@ -8,7 +8,7 @@
 (evil-leader/set-key
   "ff" 'find-file
   "bb" 'switch-to-buffer
-
+  "t"  'counsel-git
   ;;代码缩进
   "\\" 'indent-region-or-buffer
   
@@ -24,7 +24,6 @@
   "q"  'delete-window
 
   ;;搜索文件
-  "t"  'counsel-git
   "ps" 'helm-do-ag-project-root
   
   )
