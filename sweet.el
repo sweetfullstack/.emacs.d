@@ -11,6 +11,7 @@
 (require 'init-op-func)
 (require 'init-set-packages)
 (require 'init-lsp)
+(require 'init-common-lisp)
 (require 'init-web)
 (require 'init-evil)
 (require 'init-keybindings)

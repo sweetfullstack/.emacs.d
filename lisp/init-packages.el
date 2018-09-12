@@ -43,7 +43,8 @@
 			 window-numbering
 			 evil-nerd-commenter
 			 which-key
-			 ;;python
+			 ;;common lisp
+			 slime
 			 
 			 )  "Default packages")
 
