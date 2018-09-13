@@ -14,6 +14,7 @@
 			 use-package
 			 ;;keybindings.el配置
 			 ;;或者evil.el配置
+			 ;;增加emacs基础功能插件
 			 swiper
 			 counsel		 
 			 iedit
@@ -46,7 +47,9 @@
 			 which-key
 			 ;;common lisp
 			 slime
-			 
+			 ;;python
+			 virtualenvwrapper
+
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
