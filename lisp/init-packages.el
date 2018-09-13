@@ -21,6 +21,9 @@
 			 helm-ag
 			 expand-region
 			 projectile;;将目录变为项目.projectile
+			 ;;目录树配置
+			 neotree
+			 all-the-icons
 			 ;;set-package.el 插件增加基础配置
 			 company
 			 auto-yasnippet

@@ -32,6 +32,5 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-
 ;;文件末尾
 (provide 'init-set-packages)

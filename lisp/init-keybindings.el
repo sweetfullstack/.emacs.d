@@ -1,4 +1,7 @@
 
+;;打开目录树
+(global-set-key [f8] 'neotree-toggle)
+
 ;;打开最近修改过的文件
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
@@ -92,8 +95,6 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 ;;---------------------代码补齐语法检查配置结束----------------------
-
-;;运行python文件
 
 ;;文件末尾
 (provide 'init-keybindings)

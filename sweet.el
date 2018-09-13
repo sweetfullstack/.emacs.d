@@ -7,6 +7,7 @@
 (require 'init-packages)
 (require 'init-better-defaults)
 (require 'init-ui)
+(require 'init-dir-tree)
 (require 'init-web)
 (require 'init-org)
 (require 'init-op-func)

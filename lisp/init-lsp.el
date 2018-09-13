@@ -1,4 +1,4 @@
-;;-----------------lsp补全设置-------------------------
+;;lsp补全
 ;;目前只有python
 (use-package lsp-mode
   :ensure t
@@ -44,7 +44,8 @@
 
   (add-hook 'lsp-after-initialize-hook 'lsp-set-cfg))
 
-;;-------------------------lsp之python　end -------------------------------
+
+(setq lsp-message-project-root-warning t)
 
 ;;文件末尾
 (provide 'init-lsp)
