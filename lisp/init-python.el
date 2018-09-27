@@ -26,5 +26,6 @@
   (define-key python-mode-map [f5] 'python/run-current-file))
 
 
+
 ;;文件末尾
 (provide 'init-python)
