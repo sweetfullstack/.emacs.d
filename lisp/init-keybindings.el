@@ -8,8 +8,8 @@
 ;;expand-region  更方便的选中一片区域
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-;;编辑完括号内容直接开始下一行
-(global-set-key (kbd "C-l") 'newline-without-break-of-line)
+;;编辑完括号内容向右移动一格
+(global-set-key (kbd "C-l") 'forward-char)
 
 ;;向后删除一个单词
 (global-set-key (kbd "C-w") 'backward-kill-word)
