@@ -33,6 +33,7 @@
 			 exec-path-from-shell
 			 ;;lsp补全
 			 lsp-ui
+			 lsp-go
 			 lsp-mode
 			 company-lsp
 			 ;;ui
@@ -52,7 +53,8 @@
 			 slime
 			 ;;python
 			 virtualenvwrapper
-
+			 ;;golang
+			 go-mode
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
