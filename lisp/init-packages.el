@@ -33,8 +33,8 @@
 			 exec-path-from-shell
 			 ;;lsp补全
 			 lsp-ui
-			 lsp-go
 			 lsp-mode
+			 lsp-go
 			 company-lsp
 			 ;;ui
 			 atom-one-dark-theme
