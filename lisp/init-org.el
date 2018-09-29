@@ -11,5 +11,10 @@
          "* TODO [#B] %?\n  %i\n"
          :empty-lines 1)))
 
+;;在emacs中执行python代码
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+
 ;;文件末尾
 (provide 'init-org)
