@@ -49,10 +49,10 @@
 			 evil-nerd-commenter
 			 which-key
 			 ;;common lisp
-			 slime
+			 sly
+			 common-lisp-snippets
 			 ;;python
 			 virtualenvwrapper
-			 ;;golang
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
