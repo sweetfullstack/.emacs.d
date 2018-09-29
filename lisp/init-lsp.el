@@ -19,8 +19,7 @@
   (add-hook 'python-mode-hook
             (lambda ()
               (lsp-python-enable)))
-
-
+  
   ;; lsp extras
   (use-package lsp-ui
     :ensure t
