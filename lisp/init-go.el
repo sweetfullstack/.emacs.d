@@ -1,4 +1,3 @@
 
-(add-hook 'go-mode-hook #'lsp-go-enable)
-
+;;文件末尾
 (provide 'init-go)

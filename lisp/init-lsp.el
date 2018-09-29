@@ -1,24 +1,31 @@
 ;;lsp补全
-;;目前只有python
 (use-package lsp-mode
   :ensure t
   :config
 
   ;; make sure we have lsp-imenu everywhere we have LSP
   (require 'lsp-imenu)
-  (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)  
-  ;; get lsp-python-enable defined
-  ;; NB: use either projectile-project-root or ffip-get-project-root-directory
-  ;;     or any other function that can be used to find the root directory of a project
+  (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
+  
+  ;;python lsp--------------------------------------------
   (lsp-define-stdio-client lsp-python "python"
                            #'projectile-project-root
                            '("pyls"))
 
-  ;; make sure this is activated when python-mode is activated
-  ;; lsp-python-enable is created by macro above 
   (add-hook 'python-mode-hook
             (lambda ()
               (lsp-python-enable)))
+
+   ;; Golang lsp------------------------------------------
+  (lsp-define-stdio-client
+   lsp-go
+   "go"
+   (lambda () default-directory)
+   '("go-langserver" "-mode=stdio" "-gocodecompletion")
+   :ignore-regexps
+   '("^langserver-go: reading on stdin, writing on stdout$"))
+  (add-hook 'go-mode-hook #'lsp-go-enable)
+  
   
   ;; lsp extras
   (use-package lsp-ui
