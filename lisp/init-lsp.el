@@ -16,16 +16,6 @@
             (lambda ()
               (lsp-python-enable)))
 
-   ;; Golang lsp------------------------------------------
-  (lsp-define-stdio-client
-   lsp-go
-   "go"
-   (lambda () default-directory)
-   '("go-langserver" "-mode=stdio" "-gocodecompletion")
-   :ignore-regexps
-   '("^langserver-go: reading on stdin, writing on stdout$"))
-  (add-hook 'go-mode-hook #'lsp-go-enable)
-  
   
   ;; lsp extras
   (use-package lsp-ui

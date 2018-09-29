@@ -34,7 +34,6 @@
 			 ;;lsp补全
 			 lsp-ui
 			 lsp-mode
-			 lsp-go
 			 company-lsp
 			 ;;ui
 			 atom-one-dark-theme
@@ -54,7 +53,6 @@
 			 ;;python
 			 virtualenvwrapper
 			 ;;golang
-			 go-mode
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
