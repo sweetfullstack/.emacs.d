@@ -1,8 +1,11 @@
 #目录
 /elpa
 /auto-save-list
+/snippets
 recentf
 recentf~
+
 #文件
 *.el~
-*.eld
+*.el
+
