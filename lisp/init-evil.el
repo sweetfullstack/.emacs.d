@@ -20,8 +20,8 @@
   "w/" 'split-window-right
   "w-" 'split-window-below
   ":"  'counsel-M-x
-  "q" 'delete-other-windows
-  "wd"  'kill-buffer-and-window
+  "wd" 'delete-other-windows
+  "q"  'kill-buffer-and-window
   
   ;;搜索文件
   "ps" 'helm-do-ag-project-root
