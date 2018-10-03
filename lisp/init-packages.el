@@ -49,7 +49,7 @@
 			 evil-nerd-commenter
 			 which-key
 			 ;;common lisp
-			 slime
+			 sly
 			 common-lisp-snippets
 			 ;;python
 			 virtualenvwrapper
