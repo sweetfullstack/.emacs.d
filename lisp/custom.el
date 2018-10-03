@@ -9,7 +9,7 @@
  '(evil-leader/leader "SPC")
  '(evil-want-C-u-scroll t)
  '(popwin:popup-window-position (quote right))
- '(popwin:popup-window-width 70)
+ '(popwin:popup-window-width 50)
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
