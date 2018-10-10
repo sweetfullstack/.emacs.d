@@ -77,7 +77,7 @@
 
 ;;emacs设置窗口透明
 ;;set transparent effect
-(setq alpha-list '((95 35) (90 45)))
+(setq alpha-list '((95 65) (90 75)))
 (defun loop-alpha ()
   (interactive)
   (let ((h (car alpha-list)))                ;; head value will set to
