@@ -75,5 +75,19 @@
 ;;当一个窗口（frame）中存在两个分屏 （window）时，将另一个分屏自动设置成拷贝地址的目标。
 (setq dired-dwin-target 1)
 
+;;emacs设置窗口透明
+;;set transparent effect
+(setq alpha-list '((95 35) (90 45)))
+(defun loop-alpha ()
+  (interactive)
+  (let ((h (car alpha-list)))                ;; head value will set to
+    ((lambda (a ab)
+       (set-frame-parameter (selected-frame) 'alpha (list a ab))
+       (add-to-list 'default-frame-alist (cons 'alpha (list a ab)))
+       ) (car h) (car (cdr h)))
+    (setq alpha-list (cdr (append alpha-list (list h))))
+    )
+)
+
 ;;文件末尾
 (provide 'init-better-defaults)

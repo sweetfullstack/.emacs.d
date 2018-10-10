@@ -14,6 +14,8 @@
 ;;向后删除一个单词
 (global-set-key (kbd "C-w") 'backward-kill-word)
 
+;;按键调整透明度
+(global-set-key [(f11)] 'loop-alpha)
 ;;在当前项目中查找
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
