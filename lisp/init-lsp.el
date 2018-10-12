@@ -4,8 +4,8 @@
   :config
 
   ;; make sure we have lsp-imenu everywhere we have LSP
-  (require 'lsp-imenu)
-  (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
+  ;;(require 'lsp-imenu)
+  ;;(add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   
   ;;python lsp--------------------------------------------
   (lsp-define-stdio-client lsp-python "python"
@@ -15,14 +15,13 @@
   (add-hook 'python-mode-hook
             (lambda ()
               (lsp-python-enable)))
-
   
   ;; lsp extras
-  (use-package lsp-ui
-    :ensure t
-    :config
-    (setq lsp-ui-sideline-ignore-duplicate t)
-    (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+  ;;(use-package lsp-ui
+    ;;:ensure t
+    ;;:config
+    ;;(setq lsp-ui-sideline-ignore-duplicate t)
+    ;;(add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
   (use-package company-lsp
     :config
