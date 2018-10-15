@@ -8,3 +8,4 @@ recentf~
 #文件
 *.el~
 *.eld
+*.cache
