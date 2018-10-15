@@ -7,7 +7,7 @@
   ;;(require 'lsp-imenu)
   ;;(add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   
-  python lsp--------------------------------------------
+  ;;python lsp--------------------------------------------
   (lsp-define-stdio-client lsp-python "python"
                            #'projectile-project-root
                            '("pyls"))
