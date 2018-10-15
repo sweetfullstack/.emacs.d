@@ -8,10 +8,17 @@
   ;;(add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   
   ;;python lsp--------------------------------------------
+  ;;(lsp-define-stdio-client lsp-python "python"
+                           ;;#'projectile-project-root
+                           ;;'("pyls"))
   (lsp-define-stdio-client lsp-python "python"
-                           #'projectile-project-root
-                           '("pyls"))
-
+            (lsp-make-traverser #'(lambda (dir)
+                        (directory-files
+                        dir
+                        nil
+                        "\\(__init__\\|setup\\)\\.py\\|Pipfile")))
+            '("pyls"))
+  
   (add-hook 'python-mode-hook
             (lambda ()
               (lsp-python-enable)))
