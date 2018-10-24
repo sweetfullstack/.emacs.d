@@ -4,7 +4,7 @@
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells)
 (venv-initialize-eshell)
-(setq venv-location "~/.virtualenv/"); setup virtual environment folder
+(setq venv-location "~/.virtualenvs/"); setup virtual environment folder
 
 
 ;;python使用f5运行当前文件
