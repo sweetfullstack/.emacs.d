@@ -11,7 +11,8 @@
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 50)
  '(show-paren-mode t)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(word-wrap nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

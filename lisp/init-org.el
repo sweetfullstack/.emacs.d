@@ -5,6 +5,9 @@
 ;; 设置默认 Org Agenda 文件目录
 (setq org-agenda-files '("~/org"))
 
+;;org模式中自动换行
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
 ;;设置一个模板
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "工作安排")
