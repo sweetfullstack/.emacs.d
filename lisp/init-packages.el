@@ -24,6 +24,8 @@
 			 ;;目录树配置
 			 neotree
 			 all-the-icons
+			 ;;git配置
+			 magit
 			 ;;set-package.el 插件增加基础配置
 			 company
 			 auto-yasnippet
