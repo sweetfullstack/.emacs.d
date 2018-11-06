@@ -34,9 +34,6 @@
 			 popwin
 			 exec-path-from-shell
 			 ;;lsp补全
-			 lsp-ui
-			 lsp-mode
-			 company-lsp
 			 ;;ui
 			 atom-one-dark-theme
 			 ;;web
