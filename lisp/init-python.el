@@ -6,6 +6,17 @@
 (venv-initialize-eshell)
 (setq venv-location "~/.virtualenvs/"); setup virtual environment folder
 
+;;python补全
+(elpy-enable)
+
+;;flycheck检查
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;;pep8检查
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;;python使用f5运行当前文件
 (defun python/run-current-file (&optional directory)

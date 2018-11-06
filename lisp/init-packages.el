@@ -52,6 +52,9 @@
 			 common-lisp-snippets
 			 ;;python
 			 virtualenvwrapper
+			 elpy
+			 flycheck
+			 py-autopep8
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
