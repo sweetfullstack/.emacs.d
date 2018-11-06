@@ -18,6 +18,10 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+;;emacs使用jupyer notbook
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "--simple-prompt -i")
+
 ;;python使用f5运行当前文件
 (defun python/run-current-file (&optional directory)
   "Execute the current python file."

@@ -55,6 +55,7 @@
 			 elpy
 			 flycheck
 			 py-autopep8
+			 ein
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
