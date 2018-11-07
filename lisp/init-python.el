@@ -18,9 +18,17 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-;;emacs使用jupyer notbook
+;;emacs使用ipython
 (setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "--simple-prompt -i")
+      python-shell-interpreter-args "--simple-prompt -i"
+      python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+      python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+      python-shell-completion-setup-code
+      "from IPython.core.completerlib import module_completion"
+      python-shell-completion-module-string-code
+      "';'.join(module_completion('''%s'''))\n"
+      python-shell-completion-string-code
+      "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
 ;;python使用f5运行当前文件
 (defun python/run-current-file (&optional directory)
