@@ -55,6 +55,8 @@
 			 elpy
 			 flycheck
 			 py-autopep8
+			 ;;ipython-org-mode
+			 ob-ipython
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)

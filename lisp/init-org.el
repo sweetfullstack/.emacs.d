@@ -14,10 +14,14 @@
          "* TODO [#B] %?\n  %i\n"
          :empty-lines 1)))
 
+(require 'ob-ipython)
+
 ;;在emacs中执行python代码
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((python . t)))
+ '((ipython . t)
+   ;; other languages..
+   ))
 
 ;;文件末尾
 (provide 'init-org)
