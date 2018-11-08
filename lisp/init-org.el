@@ -7,7 +7,6 @@
 
 ;;org模式中自动换行
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-
 ;;设置一个模板
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "工作安排")
@@ -22,6 +21,8 @@
  '((ipython . t)
    ;; other languages..
    ))
+
+(setq org-confirm-babel-evaluate nil)
 
 ;;文件末尾
 (provide 'init-org)
