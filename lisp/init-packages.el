@@ -20,7 +20,8 @@
 			 iedit
 			 helm-ag
 			 expand-region
-			 projectile;;将目录变为项目.projectile
+			 ;;将目录变为项目.projectile
+			 projectile
 			 ;;目录树配置
 			 neotree
 			 all-the-icons

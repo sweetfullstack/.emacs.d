@@ -18,9 +18,16 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+;;emacs使用jupyter
+;;(setq python-shell-interpreter "jupyter"
+;;      python-shell-interpreter-args "console --simple-prompt"
+;;      python-shell-prompt-detect-failure-warning nil)
+;;(add-to-list 'python-shell-completion-native-disabled-interpreters
+;;             "jupyter")
+
 ;;emacs使用ipython
 (setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "--simple-prompt -i"
+      python-shell-interpreter-args "-i --simple-prompt"
       python-shell-prompt-regexp "In \\[[0-9]+\\]: "
       python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
       python-shell-completion-setup-code
@@ -29,26 +36,6 @@
       "';'.join(module_completion('''%s'''))\n"
       python-shell-completion-string-code
       "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-
-;;python使用f5运行当前文件
-(defun python/run-current-file (&optional directory)
-  "Execute the current python file."
-  (interactive
-   (list (or (and current-prefix-arg
-                  (read-directory-name "Run in directory: " nil nil t))
-             default-directory)))
-  (when (buffer-file-name)
-    (let* ((command (or (and (boundp 'executable-command) executable-command)
-                        (concat "python " (buffer-file-name))))
-           (default-directory directory)
-           (compilation-ask-about-save nil))
-      (executable-interpret (read-shell-command "Run: " command)))))
-
-
-(with-eval-after-load 'python 
-  (define-key python-mode-map [f5] 'python/run-current-file))
-
-
 
 ;;文件末尾
 (provide 'init-python)
