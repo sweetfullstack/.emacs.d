@@ -16,6 +16,10 @@
 
 ;;按键调整透明度
 (global-set-key [(f11)] 'loop-alpha)
+
+;;f5运行python
+(global-set-key [(f5)] 'maple-run-python)
+
 ;;在当前项目中查找
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)

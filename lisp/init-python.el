@@ -37,5 +37,13 @@
       python-shell-completion-string-code
       "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+;;运行python
+(defun maple-run-python ()
+  (interactive)
+  (or (python-shell-get-process) (call-interactively 'run-python))
+  (if (region-active-p)
+      (python-shell-send-region (region-beginning) (region-end) t)
+    (python-shell-send-buffer t)))
+
 ;;文件末尾
 (provide 'init-python)
