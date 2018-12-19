@@ -58,6 +58,8 @@
 			 py-autopep8
 			 ;;ipython-org-mode
 			 ob-ipython
+			 ;;auctex
+			 auctex
 			 )  "Default packages")
 
 (setq package-selected-packages sweet/packages)
