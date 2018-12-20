@@ -15,7 +15,6 @@
 (require 'init-python)
 (require 'init-common-lisp)
 (require 'init-evil)
-(require 'init-tex)
 (require 'init-keybindings)
 (require 'init-auctex)
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
