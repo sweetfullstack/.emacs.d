@@ -20,9 +20,9 @@
 ;;smartparens 补齐右边括号
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
-;;在lisp模式下单引号不做匹配
+;;在lisp模式下单引号,`不做匹配
 (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode sly-mrepl-mode lisp-mode org-mode) "'" nil :actions nil)
-
+(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode sly-mrepl-mode lisp-mode org-mode) "`" nil :actions nil)
 ;;popwin 插件可以自动将光标移动到，新创建的窗口中。使用下面的代码将其启用
 (require 'popwin)
 (popwin-mode t)
