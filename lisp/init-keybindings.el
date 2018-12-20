@@ -15,7 +15,7 @@
 (global-set-key (kbd "C-w") 'backward-kill-word)
 
 ;;按键调整透明度
-(global-set-key [(f11)] 'loop-alpha)
+(global-set-key [(f9)] 'loop-alpha)
 
 ;;f5运行python
 (global-set-key [(f5)] 'maple-run-python)
@@ -51,9 +51,9 @@
 ;;窗口操作
 (global-set-key (kbd "C-x q") 'kill-buffer-and-window)
 ;;增加窗口距离
-(global-set-key (kbd "C-x <up>") 'enlarge-window)
+(global-set-key [(f11)] 'enlarge-window)
 ;;减少窗口距离
-(global-set-key (kbd "C-x <down>") 'shrink-window)
+(global-set-key [(f12)] 'shrink-window)
 ;;-------------------------org快捷键-----------------------
 
 ;;为工作安排设定快捷键
