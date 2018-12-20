@@ -50,7 +50,10 @@
 
 ;;窗口操作
 (global-set-key (kbd "C-x q") 'kill-buffer-and-window)
-
+;;增加窗口距离
+(global-set-key (kbd "C-x <up>") 'enlarge-window)
+;;减少窗口距离
+(global-set-key (kbd "C-x <down>") 'shrink-window)
 ;;-------------------------org快捷键-----------------------
 
 ;;为工作安排设定快捷键

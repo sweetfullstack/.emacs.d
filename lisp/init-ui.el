@@ -1,5 +1,5 @@
 ;;开启emacs时全屏显示
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
+;;(setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 ;;加载主题
 (load-theme 'atom-one-dark 1)
