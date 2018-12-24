@@ -59,13 +59,5 @@
         regexp-history)
   (call-interactively 'occur))
 
-;;编辑完括号内容直接开始下一行
-(defun newline-without-break-of-line()
-  (interactive)
-  (let ((oldpos (point)))
-    (end-of-line)
-    (newline-and-indent)))
-
-
 ;;文件末尾
 (provide 'init-op-func)

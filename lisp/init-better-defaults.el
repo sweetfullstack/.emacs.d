@@ -26,8 +26,8 @@
 (setq ring-bell-function 'ignore)
 
 ;;设置默认左右分割窗口
-;;(setq split-height-threshold nil)
-;;(setq split-width-threshold 0)
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
 
 ;;设置编码
 (set-language-environment "UTF-8")
